@@ -1,4 +1,5 @@
 📸 Responsive Image Gallery
+
 A simple, fully responsive image gallery using only HTML & CSS, with media queries for a seamless experience across devices.
 
 ✨ Features:
