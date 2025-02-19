@@ -1,0 +1,77 @@
+/* Mobile first approach */
+
+/* Small devices (phones, default) */
+.image-box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media screen and (min-width: 576px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .image-box {
+    width: calc(50% - 15px);
+    margin-bottom: 0;
+  }
+  
+  .image-box img {
+    height: 180px;
+  }
+}
+
+/* Large devices (small laptops, 768px and up) */
+@media screen and (min-width: 768px) {
+  .image-box {
+    width: calc(33.33% - 15px);
+  }
+  
+  .image-box img {
+    height: 160px;
+  }
+  
+  .image-box h3 {
+    font-size: 14px;
+  }
+}
+
+/* Extra large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .gallery {
+    gap: 20px;
+  }
+  
+  .image-box {
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s ease;
+  }
+  
+  .image-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image-box img {
+    height: 180px;
+  }
+  
+  .image-box h3 {
+    font-size: 16px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .screen-info {
+    display: none;
+  }
+  
+  .image-box {
+    width: 50%;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
